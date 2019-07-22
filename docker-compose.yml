@@ -13,7 +13,7 @@ services:
   scripservicecontainer:
     image: scripservice:latest
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/spring_app_db?useUnicode=true&characterEncoding=utf8&useSSL=false
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysqlcontainer:3306/spring_app_db?useSSL=false
       - SPRING_DATASOURCE_USERNAME=testuser
       - SPRING_DATASOURCE_PASSWORD=testuserpwd
     build:
