@@ -39,6 +39,10 @@ GIT reference
  
  Docker Compose reference
  =========================
+ Docker create image
+ 
+ ```docker build -t scripservice:latest .```
+ 
  Before we can use the docker stack deploy command we first run 
  
  ```docker swarm init```
