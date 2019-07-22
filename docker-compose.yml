@@ -9,7 +9,7 @@ services:
       - MYSQL_USER=testuser
       - MYSQL_PASSWORD=testuserpwd
     volumes:
-      - /data/mysql
+      - /tmp/mysql_data:/var/lib/mysql
   scripservicecontainer:
     image: scripservice:latest
     environment:
