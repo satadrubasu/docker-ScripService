@@ -47,6 +47,8 @@ GIT reference
  
  ```docker swarm init```
  
+ ```docker swarm init --advertise-addr eth0```
+ 
  
  You need to give your app a name. Here, it is set to scripserviceapp
  
