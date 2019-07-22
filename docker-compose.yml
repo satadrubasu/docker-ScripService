@@ -1,9 +1,8 @@
 version: '3'
 
 services:
-  mysql-docker-container:
+  mysqlcontainer:
     image: mysql:latest
-    container_name: mysql
     environment:
       - MYSQL_ROOT_PASSWORD=root123
       - MYSQL_DATABASE=spring_app_db
@@ -11,19 +10,18 @@ services:
       - MYSQL_PASSWORD=testuserpwd
     volumes:
       - /data/mysql
-  scrip-service-container:
+  scripservicecontainer:
     image: scripservice:latest
-    container_name: scrip-service
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/myapp?useUnicode=true&characterEncoding=utf8&useSSL=false
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/spring_app_db?useUnicode=true&characterEncoding=utf8&useSSL=false
       - SPRING_DATASOURCE_USERNAME=testuser
       - SPRING_DATASOURCE_PASSWORD=testuserpwd
     build:
       context: ./
       dockerfile: Dockerfile
     depends_on:
-      - mysql-docker-container
+      - mysqlcontainer
     ports:
       - 8087:8080
     volumes:
-      - /data/scrip-service
+      - /data/scripservice
