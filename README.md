@@ -52,8 +52,18 @@ GIT reference
  To check stack status
  
  ```docker stack ls```
+ 
  ```docker stack rm scripserviceapp```
  
+ Rest Client Reference
+ =======================
+ 1. Post data to add a scrip
  
+ ```
+ curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"scripId":"tatamotors","scripName":"Tata Motors Ltd","faceValue":"150"}' \
+  http://node1:8087/api/scrips
+ ```
  
 
