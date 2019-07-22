@@ -23,7 +23,6 @@ WORKDIR /usr/local/app/
 
 VOLUME /tmp
 EXPOSE 8080
-RUN mvn clean install -DskipTests
-ADD target/ScripApiService-0.0.1-SNAPSHOT.jar ScripApiService-0.0.1-SNAPSHOT.jar
 
+ADD target/ScripApiService-0.0.1-SNAPSHOT.jar ScripApiService-0.0.1-SNAPSHOT.jar
 ENTRYPOINT ["java","-jar","/usr/local/app/ScripApiService-0.0.1-SNAPSHOT.jar"]

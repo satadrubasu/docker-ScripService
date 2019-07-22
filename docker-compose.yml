@@ -3,6 +3,7 @@ version: '3'
 services:
   mysql-docker-container:
     image: mysql:latest
+    container_name: mysql
     environment:
       - MYSQL_ROOT_PASSWORD=root123
       - MYSQL_DATABASE=spring_app_db
@@ -12,8 +13,9 @@ services:
       - /data/mysql
   scrip-service-container:
     image: scrip-service-image
+    container_name: scrip-service
     environment:
-      - SPRING_DATASOURCE_URL=
+      - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/myapp?useUnicode=true&characterEncoding=utf8&useSSL=false
       - SPRING_DATASOURCE_USERNAME=testuser
       - SPRING_DATASOURCE_PASSWORD=testuserpwd
     build:
