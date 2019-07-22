@@ -12,7 +12,7 @@ services:
     volumes:
       - /data/mysql
   scrip-service-container:
-    image: scrip-service-image
+    image: scripservice:latest
     container_name: scrip-service
     environment:
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysql:3306/myapp?useUnicode=true&characterEncoding=utf8&useSSL=false
