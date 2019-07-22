@@ -53,7 +53,7 @@ GIT reference
  You need to give your app a name. Here, it is set to scripserviceapp
  
  
- ```docker stack deploy -c docker-compose.yml scripserviceapp```
+ ```docker stack deploy -c docker-compose.yml scripsapp```
  
  To check stack status
  
