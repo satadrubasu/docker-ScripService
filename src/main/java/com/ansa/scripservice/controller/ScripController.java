@@ -3,6 +3,8 @@ package com.ansa.scripservice.controller;
 import java.util.List;
 import java.util.Optional;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,6 +21,8 @@ import com.ansa.scripservice.repository.ScripRepository;
 @RestController
 @RequestMapping({"/api"})
 public class ScripController {
+	
+   Logger logger = LoggerFactory.getLogger(ScripController.class);
 
    @Autowired
    private ScripRepository repos;
@@ -26,19 +30,22 @@ public class ScripController {
    @PostMapping("/scrips")
    public Scrip create(@RequestBody Scrip scrip)
    {
-       return repos.save(scrip);
+	   logger.debug("Creating Scrip for : "+ scrip.toString());
+	   return repos.save(scrip);
    }
 
    @GetMapping("/scrips")
    public List<Scrip> findAll()
    {
-       return repos.findAll();
+	   logger.debug("Returning all Scrips.");
+	   return repos.findAll();
    }
 
    @DeleteMapping("/scrips/{scripId}")
    public List<Scrip> delete(@PathVariable("scripId") Long scripId)
    {
-       repos.deleteById(scripId);
+	   logger.debug("Attempting to delete Scrip for scripId: "+ scripId);
+	   repos.deleteById(scripId);
        return repos.findAll();
    }
 
@@ -48,7 +55,8 @@ public class ScripController {
    @ResponseBody
    public Optional<Scrip> findByScripId(@PathVariable("scripId") Long scripId)
    {
-       return repos.findById(scripId);
+	   logger.debug("Attempting to fetch Scrip for scripId: "+ scripId);
+	   return repos.findById(scripId);
    }
 	
 }

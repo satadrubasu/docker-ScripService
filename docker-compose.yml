@@ -24,4 +24,4 @@ services:
     ports:
       - 8087:8080
     volumes:
-      - /data/scripservice
+      - /tmp:/usr/local/app/logs
