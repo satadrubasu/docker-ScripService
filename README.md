@@ -1,12 +1,14 @@
 # docker-ScripService
-Spring Boot Rest JPA docker and docker compose with dependency to mysql container ( multi container)
+Spring Boot Rest JPA docker and docker compose with dependency to mysql container ( multi container )
 
 ## Essence of :
- - Multi container application with external db container
- - external volume for data
+ - Multi container application with external mysql db container
+ - Map external volume for data ( logs in external mounted location )
  - Docker File best practice for container
  - Docker Compose
- - Integrate with external logs
+ - Docker compose to introduce a wait script before service boots and tries to connect to mysql
+ - Docker Network in Compose
+       By default Compose sets up a single network for your app. Each container for a service joins the default network and is both reachable by other containers on that network, and discoverable by them at a hostname identical to the container name.
 
 
 Refer to the following in this project :
