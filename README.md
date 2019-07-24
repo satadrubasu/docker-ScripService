@@ -61,6 +61,9 @@ git clone https://github.com/satadrubasu/docker-ScripService.git
 mvn clean install
 
 Docker create image or pull from dockerhub
+
+docker pull mysql:latest
+docker pull scripservice:latest
  
  ```docker build -t scripservice:latest .```
  
