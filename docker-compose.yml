@@ -12,7 +12,7 @@ services:
       - /tmp/mysql_data:/var/lib/mysql
   
   scripservicecontainer:
-    image: scripservice:latest
+    image: scripservice:nginx
     environment:
       - SPRING_DATASOURCE_URL=jdbc:mysql://mysqlcontainer:3306/spring_app_db?useSSL=false&allowPublicKeyRetrieval=true
       - SPRING_DATASOURCE_USERNAME=testuser
