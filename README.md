@@ -86,7 +86,7 @@ docker pull scripservice:latest
  
 |Date|Tims Folder |Total TC | Automatable | Non-Automatable |  Completed | InProgress | Not Started | Comments |
 |---|---|---|---|---|---|---|---|---|
-2019-11-25T13:10:38.506Z | Noisy CPU | 6 | 6 | 0 | 3 | 0 | 3 | |
-2019-11-25T13:10:48.986Z | Noisy IO | 9 | 9 | 0 | 7 | 0 | 2 | |
-2019-11-25T13:10:54.967Z | Chaos Testing | 5 | 5 | 0 | 3 | 2 | 0 | |
+|25-Nov-2019 23:59 | Noisy CPU | 6 | 6 | 0 | 3 | 0 | 3 | |
+|25-Nov-2019 23:59 | Noisy IO | 9 | 9 | 0 | 7 | 0 | 2 | |
+|26-Nov-2019 00:00 | Chaos Testing | 5 | 5 | 0 | 3 | 2 | 0 | |
 
