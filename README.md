@@ -84,9 +84,9 @@ docker pull scripservice:latest
  
  ```docker stack rm scripapp```
  
- |Date|Tims Folder |Total TC | Automatable | Non-Automatable |  Completed | InProgress | Not Started | Comments |
+|Date|Tims Folder |Total TC | Automatable | Non-Automatable |  Completed | InProgress | Not Started | Comments |
 |---|---|---|---|---|---|---|---|---|
-2019-11-25T12:53:32.941Z | Noisy CPU | 6 | 0 | 3 | 3 | 0 | 0 | |
-2019-11-25T12:53:59.209Z | Noisy IO | 9 | 0 | 2 | 7 | 0 | 0 | |
-2019-11-25T12:54:13.358Z | Chaos Testing | 5 | 0 | 0 | 3 | 2 | 0 | |
+2019-11-25T13:04:49.459Z | Noisy CPU | 6 | 6 | 0 | 3 | 0 | 0 | |
+2019-11-25T13:04:59.745Z | Noisy IO | 9 | 9 | 0 | 7 | 0 | 0 | |
+2019-11-25T13:05:07.851Z | Chaos Testing | 5 | 5 | 0 | 3 | 2 | 0 | |
 
